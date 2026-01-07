@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssistHealth - Your Personal Healthcare Navigator in India</title>
+    <meta name="description" content="Personal healthcare navigators in India coordinating doctors, tests, hospitals & senior care for busy families and NRIs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/AH1.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="announcement-content">
+            <div class="announcement-text">
+                <i class="fas fa-gift"></i>
+                New Year Special: Get 40% OFF on Premium Membership - Limited Time!
+            </div>
+            <a href="#" class="announcement-cta">Claim Offer →</a>
+            <button class="announcement-close" onclick="closeAnnouncement()" aria-label="Close announcement">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="images/AH1.png" alt="AssistHealth Logo" class="logo">
+                    <span class="logo-text">AssistHealth</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Our Plans</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="minimal-login.html" class="btn btn-secondary">Login</a>
+                    <a href="#contact" class="btn btn-primary">Register</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Your Personal Healthcare Navigator — So You're Never Alone When It Matters Most.</h1>
+                    <p class="hero-subheading">From doctor visits to recovery, we manage your healthcare journey end-to-end — so you can focus on living, not coordinating.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-large">Talk to a Care Expert</a>
+                        <a href="#how-it-works" class="btn btn-secondary btn-large">See How It Works</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-icon-circle">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-signals">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fas fa-users"></i>
+                    <h3>10,000+</h3>
+                    <p>Families Supported<br>Across India</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-hospital"></i>
+                    <h3>500+</h3>
+                    <p>Verified Healthcare Partners<br>Hospitals, Labs & Specialists</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-star"></i>
+                    <h3>98%</h3>
+                    <p>Client Satisfaction<br>Based on Outcomes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section class="who-we-are" id="about">
+        <div class="container">
+            <div class="who-content">
+                <h2>We Are Not a Hospital. We Are Not an App.</h2>
+                <div class="underline"></div>
+                <p>We are a team of healthcare professionals who stand beside you — coordinating doctors, managing care, and supporting families when they need it most.</p>
+                <p class="highlight-text">At AssistHealth, your health is not a case number. It's a relationship.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <div class="services-grid">
+                
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Medical Care</h3>
+                    <p class="service-summary">Doctor consultations, specialist referrals, diagnostic coordination.</p>
+                    <button class="view-more-btn" onclick="toggleService(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="service-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Doctor Consultations</li>
+                            <li><i class="fas fa-check"></i> Diagnostics & Lab Tests</li>
+                            <li><i class="fas fa-check"></i> Specialist Referrals</li>
+                            <li><i class="fas fa-check"></i> Treatment Plan Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Hospital & Emergency Support</h3>
+                    <p class="service-summary">Admission assistance, in-hospital coordination, discharge planning.</p>
+                    <button class="view-more-btn" onclick="toggleService(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="service-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Emergency Response</li>
+                            <li><i class="fas fa-check"></i> Hospital Admission Support</li>
+                            <li><i class="fas fa-check"></i> In-Hospital Care Coordination</li>
+                            <li><i class="fas fa-check"></i> Discharge Planning & Follow-up</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-house-medical"></i>
+                    </div>
+                    <h3>Home-Based Care</h3>
+                    <p class="service-summary">Nursing, caregiving, post-hospital recovery support.</p>
+                    <button class="view-more-btn" onclick="toggleService(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="service-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Professional Nursing Services</li>
+                            <li><i class="fas fa-check"></i> Trained Caregivers</li>
+                            <li><i class="fas fa-check"></i> Post-Surgery Recovery</li>
+                            <li><i class="fas fa-check"></i> Rehabilitation Support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3>Care Navigation</h3>
+                    <p class="service-summary">End-to-end coordination, reports, follow-ups, and medical guidance.</p>
+                    <button class="view-more-btn" onclick="toggleService(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="service-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Appointment Scheduling</li>
+                            <li><i class="fas fa-check"></i> Medical Records Management</li>
+                            <li><i class="fas fa-check"></i> Treatment Follow-ups</li>
+                            <li><i class="fas fa-check"></i> Family Communication & Updates</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Diagnostics</h3>
+                    <p class="service-summary">Streamlined coordination of lab tests and imaging services.</p>
+                    <button class="view-more-btn" onclick="toggleService(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="service-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Pathological Diagnostics</li>
+                            <li><i class="fas fa-check"></i> Radiological Diagnostics</li>
+                            <li><i class="fas fa-check"></i> Home Sample Collection</li>
+                            <li><i class="fas fa-check"></i> Report Interpretation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Ambulance Services</h3>
+                    <p class="service-summary">Emergency transportation with trained medical personnel.</p>
+                    <button class="view-more-btn" onclick="toggleService(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="service-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 24/7 Emergency Response</li>
+                            <li><i class="fas fa-check"></i> Basic & Advanced Life Support</li>
+                            <li><i class="fas fa-check"></i> Inter-Hospital Transfers</li>
+                            <li><i class="fas fa-check"></i> ICU Ambulances</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 7 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-folder-medical"></i>
+                    </div>
+                    <h3>Health Records Management</h3>
+                    <p class="service-summary">Secure organization and digitization of medical records.</p>
+                    <button class="view-more-btn" onclick="toggleService(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="service-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Digital Health Timeline</li>
+                            <li><i class="fas fa-check"></i> Secure Cloud Storage</li>
+                            <li><i class="fas fa-check"></i> Easy Provider Sharing</li>
+                            <li><i class="fas fa-check"></i> Document Organization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 8 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Helpline</h3>
+                    <p class="service-summary">Round-the-clock healthcare guidance and support.</p>
+                    <button class="view-more-btn" onclick="toggleService(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="service-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Immediate Medical Guidance</li>
+                            <li><i class="fas fa-check"></i> Symptom Triage</li>
+                            <li><i class="fas fa-check"></i> Appointment Assistance</li>
+                            <li><i class="fas fa-check"></i> Emergency Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How AssistHealth Works</h2>
+            <p class="section-subtitle">Your healthcare journey, simplified in 4 steps</p>
+            
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-phone step-icon"></i>
+                    <h3>Connect with Us</h3>
+                    <p>Choose a membership plan that fits your needs and enroll online or by calling us.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-user-nurse step-icon"></i>
+                    <h3>Get Your Navigator</h3>
+                    <p>A trained healthcare professional is assigned exclusively to you and your family.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-comments step-icon"></i>
+                    <h3>Receive Ongoing Care</h3>
+                    <p>Call or message your navigator for appointments, diagnostics, hospital support, and home care.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-heart step-icon"></i>
+                    <h3>Feel Supported, Always</h3>
+                    <p>We track treatment progress, ensure follow-ups, and keep your family informed every step.</p>
+                </div>
+            </div>
+
+            <div class="process-cta">
+                <a href="#contact" class="btn btn-primary btn-large">Start Your Journey Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose AssistHealth Section -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Families Choose AssistHealth</h2>
+            <div class="differentiators-grid">
+                
+                <!-- Differentiator Card 1 -->
+                <div class="differentiator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>One Dedicated Point of Contact</h3>
+                    <p>Your personal healthcare navigator who knows your complete medical history and coordinates all your care needs.</p>
+                </div>
+
+                <!-- Differentiator Card 2 -->
+                <div class="differentiator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>No Hospital Bias</h3>
+                    <p>Independent recommendations based solely on your needs, not commissions or partnerships.</p>
+                </div>
+
+                <!-- Differentiator Card 3 -->
+                <div class="differentiator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Real Humans, Real Accountability</h3>
+                    <p>Not a call center or chatbot. Real healthcare professionals you can trust and rely on.</p>
+                </div>
+
+                <!-- Differentiator Card 4 -->
+                <div class="differentiator-card">
+                    <div class="card-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Continuity of Care</h3>
+                    <p>Seamless coordination across all providers—from diagnosis to recovery and beyond.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <h2 class="section-title">AssistHealth by the Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Years Serving Families</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="10000">0</div>
+                    <div class="stat-label">Families Supported</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Partner Hospitals & Labs</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Dedicated Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Trusted by families across India</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonials-track">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            My wife had been suffering from tenosynovitis for years. AssistHealth arranged online consultations, scheduled surgery, and followed up regularly during recovery. I highly recommend them to NRI families.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Dilip Kumar</span> <span class="author-separator">•</span> <span class="author-location">USA</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            The best choice I made for my family during illness. AssistHealth provides extreme care and support during hospital stay, recovery, and helps you find the best hospital/doctor/treatment when you need them.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Pavithra K</span> <span class="author-separator">•</span> <span class="author-location">Bangalore</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            I appreciate AssistHealth for their exceptional and prompt support for my mother overnight. The continuous medical assistance provided over 15 days has been invaluable.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Vimala Rajan</span> <span class="author-separator">•</span> <span class="author-location">Singapore</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            I highly recommend AssistHealth for their outstanding service in managing my mother's health condition. The team was empathetic, professional, and offered personalized care throughout.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Sai Manohar</span> <span class="author-separator">•</span> <span class="author-location">Bangalore</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            I am grateful for promptly providing necessary medication and securing a tele-consultation within 5 minutes. I appreciate the swift response from the USA.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Vikram Lekkala</span> <span class="author-separator">•</span> <span class="author-location">USA</span>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate Testimonials for Seamless Loop -->
+                    
+                    <!-- Testimonial 1 (Duplicate) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            My wife had been suffering from tenosynovitis for years. AssistHealth arranged online consultations, scheduled surgery, and followed up regularly during recovery. I highly recommend them to NRI families.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Dilip Kumar</span> <span class="author-separator">•</span> <span class="author-location">USA</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 (Duplicate) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            The best choice I made for my family during illness. AssistHealth provides extreme care and support during hospital stay, recovery, and helps you find the best hospital/doctor/treatment when you need them.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Pavithra K</span> <span class="author-separator">•</span> <span class="author-location">Bangalore</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 (Duplicate) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            I appreciate AssistHealth for their exceptional and prompt support for my mother overnight. The continuous medical assistance provided over 15 days has been invaluable.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Vimala Rajan</span> <span class="author-separator">•</span> <span class="author-location">Singapore</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 (Duplicate) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            I highly recommend AssistHealth for their outstanding service in managing my mother's health condition. The team was empathetic, professional, and offered personalized care throughout.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Sai Manohar</span> <span class="author-separator">•</span> <span class="author-location">Bangalore</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 (Duplicate) -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            I am grateful for promptly providing necessary medication and securing a tele-consultation within 5 minutes. I appreciate the swift response from the USA.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <span class="author-name">Vikram Lekkala</span> <span class="author-separator">•</span> <span class="author-location">USA</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Fade Edges -->
+            <div class="fade-left"></div>
+            <div class="fade-right"></div>
+        </div>
+    </section>
+
+    <!-- Membership Plans Section -->
+    <section class="membership-plans" id="plans">
+        <div class="container">
+            <h2 class="section-title">Membership Plans</h2>
+            <p class="section-subtitle">Choose the plan that fits your healthcare needs</p>
+            
+            <div class="plans-grid">
+                
+                <!-- Premium Care Plan -->
+                <div class="plan-card featured-plan">
+                    <div class="plan-badge">Most Popular</div>
+                    <h3>Premium Care Plan</h3>
+                    <div class="plan-price">₹3,000<span>/year</span></div>
+                    <p class="plan-subtext">+ ₹1,000 registration (one-time)</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Dedicated healthcare navigator</li>
+                        <li><i class="fas fa-check"></i> Medical record management</li>
+                        <li><i class="fas fa-check"></i> One online consultation (free)</li>
+                        <li><i class="fas fa-check"></i> Continuous care coordination</li>
+                        <li><i class="fas fa-check"></i> Priority appointment scheduling</li>
+                        <li><i class="fas fa-check"></i> 24/7 helpline access</li>
+                        <li><i class="fas fa-check"></i> Family coverage (up to 4 members)</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <!-- Special Care Plans -->
+                <div class="plan-card">
+                    <div class="plan-badge teal-badge">For Complex Needs</div>
+                    <h3>Special Care Plans</h3>
+                    <div class="plan-price">₹15,000<span>/year</span></div>
+                    <p class="plan-subtext">+ ₹1,000 registration (one-time)</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> All Premium Plan benefits</li>
+                        <li><i class="fas fa-check"></i> Dedicated care team</li>
+                        <li><i class="fas fa-check"></i> Priority access to specialists</li>
+                        <li><i class="fas fa-check"></i> Home visits & nursing support</li>
+                        <li><i class="fas fa-check"></i> Chronic, cancer & post-surgery care</li>
+                        <li><i class="fas fa-check"></i> 4 free online consultations</li>
+                        <li><i class="fas fa-check"></i> 4 free nurse visits</li>
+                        <li><i class="fas fa-check"></i> Custom care plans available</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Talk to Expert</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialized Care Programs Section -->
+    <section class="specialized-care" id="specialized-care">
+        <div class="container">
+            <h2 class="section-title">Specialized Care Programs</h2>
+            <p class="section-subtitle">Tailored support for specific healthcare needs</p>
+            
+            <div class="care-packages">
+                
+                <!-- Package 1: Senior Care -->
+                <div class="care-package">
+                    <div class="package-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Senior Care Package</h3>
+                    <p>Geriatric-specialized support for elderly healthcare needs</p>
+                    <a href="#" class="package-link">Learn More →</a>
+                </div>
+
+                <!-- Package 2: Cancer Care -->
+                <div class="care-package">
+                    <div class="package-icon">
+                        <i class="fas fa-ribbon"></i>
+                    </div>
+                    <h3>Cancer Care Package</h3>
+                    <p>Comprehensive support throughout diagnosis, treatment, and recovery</p>
+                    <a href="#" class="package-link">Learn More →</a>
+                </div>
+
+                <!-- Package 3: Maternity Care -->
+                <div class="care-package">
+                    <div class="package-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Maternity Package</h3>
+                    <p>Complete support throughout pregnancy, delivery, and postpartum</p>
+                    <a href="#" class="package-link">Learn More →</a>
+                </div>
+
+                <!-- Package 4: Chronic Care -->
+                <div class="care-package">
+                    <div class="package-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Chronic Care Package</h3>
+                    <p>Long-term management for diabetes, cardiac, and chronic conditions</p>
+                    <a href="#" class="package-link">Learn More →</a>
+                </div>
+
+                <!-- Package 5: Surgery Care -->
+                <div class="care-package">
+                    <div class="package-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Surgery Care Package</h3>
+                    <p>Pre and post-surgery coordination with complete recovery support</p>
+                    <a href="#" class="package-link">Learn More →</a>
+                </div>
+
+                <!-- Package 6: Hospital Care -->
+                <div class="care-package">
+                    <div class="package-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3>Hospital & Post-Hospital Care</h3>
+                    <p>In-hospital companion and comprehensive discharge planning</p>
+                    <a href="#" class="package-link">Learn More →</a>
+                </div>
+
+                <!-- Package 7: Critical Care -->
+                <div class="care-package">
+                    <div class="package-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3>Critical Care Package</h3>
+                    <p>Intensive support during serious or life-threatening conditions</p>
+                    <a href="#" class="package-link">Learn More →</a>
+                </div>
+
+                <!-- Package 8: Palliative Care -->
+                <div class="care-package">
+                    <div class="package-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Palliative Care Package</h3>
+                    <p>Compassionate end-of-life care and family support services</p>
+                    <a href="#" class="package-link">Learn More →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to Transform Your Healthcare Experience?</h2>
+                    <p>Join thousands of families who trust AssistHealth for seamless, personalized care.</p>
+                    
+                    <div class="benefits">
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Your dedicated healthcare navigator in 24 hours</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No long-term commitment, cancel anytime</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Start with a free consultation call</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-box">
+                    <div class="offer-badge">Limited Time Offer</div>
+                    <div class="pricing">
+                        <div class="original-price">₹5,000</div>
+                        <div class="current-price">₹3,000/year</div>
+                        <div class="savings">Save 40% on Premium Membership</div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary btn-large cta-button">Get Started Today</a>
+                    <a href="#contact" class="talk-to-expert">or Talk to Expert</a>
+                </div>
+            </div>
+            
+            <div class="trust-elements">
+                <i class="fas fa-shield-alt"></i> Secure & Confidential
+                <i class="fas fa-clock"></i> 24/7 Availability
+                <i class="fas fa-users"></i> 10,000+ Families Supported
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                
+                <!-- Column 1: Brand & Social -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/AH1.png" alt="AssistHealth Logo">
+                        <span>AssistHealth</span>
+                    </div>
+                    <p class="footer-tagline">India's 1st Healthcare Navigation Platform. We transform the way you experience healthcare with premium, personalized, and priority services.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#plans">Membership Plans</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Our Services -->
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#services">Doctor Consultations</a></li>
+                        <li><a href="#services">Healthcare Navigation</a></li>
+                        <li><a href="#services">Post Hospital Care</a></li>
+                        <li><a href="#services">AH Hospital Companion</a></li>
+                        <li><a href="#services">Diagnostics</a></li>
+                        <li><a href="#services">Ambulance</a></li>
+                        <li><a href="#services">Organize Health Records</a></li>
+                        <li><a href="#services">24/7 Helpline</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Us -->
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>AssistHealth,<br>
+                            Floor, #850, 3rd Floor,<br>
+                            Sahakara Nagar Main Rd,<br>
+                            Bengaluru, Karnataka 560092</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:support@assisthealth.in">support@assisthealth.in</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+919611232569">+91 96112 32569</a><br>
+                                <a href="tel:+919611232519">+91 96112 32519</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 AssistHealth. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#terms">Terms of Service</a>
+                    <span class="separator">|</span>
+                    <a href="#sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/919611232569?text=Hi,%20I%20need%20help%20with%20healthcare%20navigation" target="_blank" class="whatsapp-chat" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AssistHealth</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="minimal-login-page">
+        <!-- Back to Home Link -->
+        <a href="index.html" class="back-to-home">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Left Panel - Login Form -->
+            <div class="left-panel">
+                <div class="login-content">
+                    <!-- Logo + Brand -->
+                    <div class="brand-header">
+                        <img src="images/AH1.png" alt="AssistHealth Logo" class="logo-img">
+                        <div class="brand-text">
+                            <span class="logo-name">AssistHealth</span>
+                            <span class="tagline">Health. Assured. Always.</span>
+                        </div>
+                    </div>
+
+                    <!-- Welcome Text -->
+                    <div class="welcome-text">
+                        <h1>Welcome Back</h1>
+                        <p class="login-journey-text">Login to manage your healthcare journey with your personal care navigator</p>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form class="login-form" id="loginFormMinimal">
+                        <!-- Username Input -->
+                        <div class="input-group">
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="username" name="username" placeholder="User Name" required aria-label="Username">
+                            </div>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="input-group">
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" name="password" placeholder="Password" required aria-label="Password">
+                                <button type="button" class="show-password" id="showPassword" aria-label="Show password">
+                                    SHOW
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Login Button -->
+                        <button type="submit" class="login-btn" aria-label="Login to your account">Login</button>
+
+                        <!-- Forgot Password Link -->
+                        <div class="forgot-password-link">
+                            <a href="#" id="forgotPasswordMinimal">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Panel - Registration Prompt -->
+            <div class="right-panel">
+                <div class="registration-content">
+                    <!-- Icon -->
+                    <div class="reg-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+
+                    <!-- Heading -->
+                    <h2>New Here?</h2>
+
+                    <!-- Description -->
+                    <p>Get your dedicated healthcare navigator who coordinates doctors, manages appointments, and supports your entire healthcare journey.</p>
+
+                    <!-- Register Button -->
+                    <button class="register-btn" id="registerTrigger" aria-label="Register for an account">Register Here</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Modal -->
+        <div class="modal-overlay" id="registrationModalMinimal" style="display: none;">
+            <div class="modal-container">
+                <button class="modal-close" id="modalCloseMinimal">&times;</button>
+                
+                <div class="modal-header">
+                    <h2>Create Your Account</h2>
+                    <p>Join our healthcare platform today</p>
+                </div>
+
+                <form class="registration-form" id="registrationFormMinimal">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstNameMinimal">First Name *</label>
+                            <input type="text" id="firstNameMinimal" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastNameMinimal">Last Name *</label>
+                            <input type="text" id="lastNameMinimal" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEmailMinimal">Email Address *</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="regEmailMinimal" name="regEmail" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regPasswordMinimal">Password *</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="regPasswordMinimal" name="regPassword" required>
+                            <button type="button" class="show-password" id="showRegPassword">
+                                SHOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPasswordMinimal">Confirm Password *</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirmPasswordMinimal" name="confirmPassword" required>
+                            <button type="button" class="show-password" id="showConfirmPassword">
+                                SHOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="register-btn-modal">Create Account</button>
+
+                    <div class="modal-footer">
+                        <p>Already have an account? <a href="#" id="loginFromModalMinimal">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Forgot Password Modal -->
+        <div class="modal-overlay" id="forgotPasswordModal" style="display: none;">
+            <div class="modal-container">
+                <button class="modal-close" id="forgotPasswordClose">&times;</button>
+                
+                <div class="modal-header">
+                    <h2>Reset Your Password</h2>
+                    <p>Enter your email and we'll send you a reset link</p>
+                </div>
+
+                <form class="forgot-password-form" id="forgotPasswordFormMinimal">
+                    <div class="form-group">
+                        <label for="forgotEmailMinimal">Email Address</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="forgotEmailMinimal" name="forgotEmail" placeholder="Enter your registered email" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="reset-btn">Send Reset Link</button>
+
+                    <div class="modal-footer">
+                        <p><a href="#" id="backToLoginMinimal">← Back to Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlayMinimal" style="display: none;">
+            <div class="loading-content">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Logging you in...</p>
+            </div>
+        </div>
+
+        <!-- Success Overlay -->
+        <div class="success-overlay" id="successOverlayMinimal" style="display: none;">
+            <div class="success-content">
+                <i class="fas fa-check-circle"></i>
+                <h3>Login Successful!</h3>
+                <p>Redirecting to dashboard...</p>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage" style="display: none;">
+            Invalid username or password
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
