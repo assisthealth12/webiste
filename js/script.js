@@ -1085,3 +1085,41 @@ if (document.querySelector('.minimal-login-page')) {
         return emailRegex.test(email);
     }
 }
+
+// Services Infinite Carousel Functionality
+(function() {
+    const servicesGrid = document.querySelector('.services-grid');
+    
+    if (servicesGrid) {
+        // Duplicate the cards to create an infinite loop effect
+        const originalCards = Array.from(servicesGrid.children);
+        
+        // Clone each card and append to the grid
+        originalCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            servicesGrid.appendChild(clone);
+        });
+        
+        // Set up the animation
+        function setupAnimation() {
+            // Reset animation
+            servicesGrid.style.animation = 'none';
+            
+            // Force reflow to reset animation
+            void servicesGrid.offsetWidth;
+            
+            // Restart animation with a gentle, calm speed appropriate for healthcare UI
+            servicesGrid.style.animation = 'scroll 60s linear infinite';
+        }
+        
+        // Initialize the animation
+        setupAnimation();
+        
+        // Reinitialize on window resize to adjust for any layout changes
+        window.addEventListener('resize', () => {
+            setupAnimation();
+        });
+    }
+})();
+
+
