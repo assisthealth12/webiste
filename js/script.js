@@ -1122,4 +1122,85 @@ if (document.querySelector('.minimal-login-page')) {
     }
 })();
 
+// FAQ Section Functionality
+(function() {
+    // Initialize FAQ section
+    const faqContainer = document.querySelector('.faq-container');
+    if (!faqContainer) return;
+    
+    // Set the first category as active by default
+    const firstCategoryBtn = document.querySelector('.category-btn');
+    const firstCategory = document.querySelector('.faq-category');
+    
+    if (firstCategoryBtn && firstCategory) {
+        firstCategoryBtn.classList.add('active');
+        firstCategory.classList.add('active');
+    }
+    
+    // Add event listeners to category buttons
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            // Remove active class from all buttons and categories
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.faq-category').forEach(cat => cat.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding category
+            this.classList.add('active');
+            document.getElementById(category).classList.add('active');
+            
+            // Close all FAQ items in other categories and reset their icons
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (!item.closest(`#${category}`)) {
+                    const answer = item.querySelector('.faq-answer');
+                    const question = item.querySelector('.faq-question');
+                    const icon = question.querySelector('i');
+                    
+                    answer.classList.remove('expanded');
+                    question.classList.remove('active');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    });
+    
+    // Add event listeners to FAQ questions
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const item = this.closest('.faq-item');
+            const answer = item.querySelector('.faq-answer');
+            const icon = this.querySelector('i');
+            
+            // Close all other FAQ items in the same category
+            const category = item.closest('.faq-category');
+            category.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    const otherIcon = otherQuestion.querySelector('i');
+                    
+                    otherAnswer.classList.remove('expanded');
+                    otherQuestion.classList.remove('active');
+                    otherIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current item
+            const isExpanded = answer.classList.contains('expanded');
+            
+            if (isExpanded) {
+                answer.classList.remove('expanded');
+                this.classList.remove('active');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.classList.add('expanded');
+                this.classList.add('active');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+})();
 
