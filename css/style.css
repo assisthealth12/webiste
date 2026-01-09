@@ -251,14 +251,25 @@ body {
 
 /* Hero Section */
 .hero {
-    background: var(--soft-blue);
-    padding: 80px 0 40px;
+    background: linear-gradient(
+        90deg,
+        #eef7f4 0%,
+        #f3fbf8 55%,
+        #ffffff 100%
+    ) !important;
+    padding: 90px 0;
+    width: 100%;
+}
+
+.hero .container {
+    background: transparent !important;
 }
 
 .hero-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .hero-text {
@@ -266,10 +277,10 @@ body {
 }
 
 .hero h1 {
-    font-size: 44px;
+    font-size: 34px;
     font-weight: 700;
     color: var(--dark-charcoal);
-    line-height: 1.2;
+    line-height: 1.4;
     margin-bottom: 24px;
 }
 
@@ -326,6 +337,22 @@ body {
 .hero-icon-circle i {
     font-size: 120px;
     color: var(--white);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 520px;
+    max-width: 100%;
+    height: auto;
+    
+    filter: drop-shadow(
+        0 20px 45px rgba(0, 0, 0, 0.10)
+    );
 }
 
 /* Healthcare Coordination Section */
@@ -803,7 +830,7 @@ body {
     }
 
     .hero-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
@@ -820,13 +847,13 @@ body {
         width: 100%;
     }
 
-    .hero-icon-circle {
-        width: 200px;
-        height: 200px;
+    .hero-image {
+        justify-content: center;
+        margin-top: 40px;
     }
 
-    .hero-icon-circle i {
-        font-size: 80px;
+    .hero-image img {
+        width: 340px;
     }
 
     .trust-grid {
