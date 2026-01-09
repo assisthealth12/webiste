@@ -25,19 +25,6 @@
 </head>
 <body>
 
-    <!-- Announcement Bar -->
-    <div class="announcement-bar" id="announcementBar">
-        <div class="announcement-content">
-            <div class="announcement-text">
-                <i class="fas fa-gift"></i>
-                New Year Special: Get 40% OFF on Premium Membership - Limited Time!
-            </div>
-            <a href="#" class="announcement-cta">Claim Offer →</a>
-            <button class="announcement-close" onclick="closeAnnouncement()" aria-label="Close announcement">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    </div>
 
     <!-- Header -->
     <header class="header">
@@ -76,8 +63,11 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>AssistHealth – Your Personal Healthcare Navigator in India</h1>
-                    <p class="hero-subheading">Healthcare is complicated when managed alone—multiple doctors, scattered reports, and endless follow-ups. AssistHealth provides one dedicated healthcare professional, called a Healthcare Navigator, who remains the core point of care, supported by secure digital systems, AI-assisted tools, and remote health monitoring devices to coordinate specialist doctors, diagnostics, hospitals, and home care—so families receive seamless and stress-free medical support.</p>
+                    <h1>Healthcare, Simplified. Personalised. Always Supported.</h1>
+                    <div class="hero-subheading">
+                        <p><strong>Premium, Personalised & Priority Healthcare Coordination</strong>—Enabled by HealthTech, AI & Remote Monitoring</p>
+                        <p>AssistHealth provides one dedicated <strong>Healthcare Navigator</strong> who manages and coordinates your healthcare—doctors, hospitals, tests, reports, and follow-ups—so you and your family don' t have to do it alone.</p>
+                    </div>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary btn-large">Talk to a Navigator</a>
                         <a href="#plans" class="btn btn-secondary btn-large">Join Membership</a>
@@ -91,7 +81,6 @@
             </div>
         </div>
     </section>
-
 
 
     <!-- Who We Are -->
@@ -109,169 +98,105 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">What We Do</h2>
-            <div class="carousel-container">
-                <div class="services-carousel">
-                    <div class="services-grid">
-                        <!-- Service Card 1 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-stethoscope"></i>
-                    </div>
-                    <h3>Medical Care</h3>
-                    <p class="service-summary">Doctor consultations, specialist referrals, diagnostic coordination.</p>
-                    <button class="view-more-btn" onclick="toggleService(this)">
-                        View More <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Doctor Consultations</li>
-                            <li><i class="fas fa-check"></i> Diagnostics & Lab Tests</li>
-                            <li><i class="fas fa-check"></i> Specialist Referrals</li>
-                            <li><i class="fas fa-check"></i> Treatment Plan Coordination</li>
-                        </ul>
-                    </div>
+            <h2 class="section-title">Healthcare Services, Organised Around Your Care Journey</h2>
+            <div class="services-journey-grid">
+                <div class="service-journey-column">
+                    <h3>Preventive & Ongoing Care</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-heartbeat"></i> Preventive health check‑ups</li>
+                        <li><i class="fas fa-user-md"></i> Doctor & specialist consultations (Online, Offline and Home)</li>
+                        <li><i class="fas fa-vial"></i> Diagnostics and lab coordination</li>
+                        <li><i class="fas fa-folder-open"></i> Medical records management</li>
+                        <li><i class="fas fa-procedures"></i> Chronic condition monitoring</li>
+                        <li><i class="fas fa-bell"></i> Follow‑ups and reminders</li>
+                    </ul>
                 </div>
+                
+                <div class="service-journey-column">
+                    <h3>Hospital & Post‑Hospital Care</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-calendar-check"></i> Hospital admissions & scheduling</li>
+                        <li><i class="fas fa-user-nurse"></i> In‑hospital coordination & companions</li>
+                        <li><i class="fas fa-file-medical"></i> Discharge planning & documentation</li>
+                        <li><i class="fas fa-file-invoice-dollar"></i> Insurance coordination & claims support</li>
+                        <li><i class="fas fa-bed"></i> Home nursing & caregiving</li>
+                        <li><i class="fas fa-wheelchair"></i> Physiotherapy & rehabilitation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-journey-column">
+                    <h3>Long‑Term & Assisted Care</h3>
+                    <ul class="service-list">
+                        <li><i class="fas fa-user-friends"></i> Senior care coordination</li>
+                        <li><i class="fas fa-heart"></i> Chronic disease management</li>
+                        <li><i class="fas fa-users"></i> Multiple specialist coordination</li>
+                        <li><i class="fas fa-user-injured"></i> Home nurses & caregivers</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> Emergency escalation planning</li>
+                        <li><i class="fas fa-comment-alt"></i> Family updates & reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Service Card 2 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hospital"></i>
-                    </div>
-                    <h3>Hospital & Emergency Support</h3>
-                    <p class="service-summary">Admission assistance, in-hospital coordination, discharge planning.</p>
-                    <button class="view-more-btn" onclick="toggleService(this)">
-                        View More <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Emergency Response</li>
-                            <li><i class="fas fa-check"></i> Hospital Admission Support</li>
-                            <li><i class="fas fa-check"></i> In-Hospital Care Coordination</li>
-                            <li><i class="fas fa-check"></i> Discharge Planning & Follow-up</li>
-                        </ul>
+    <!-- Healthcare Support for Schools, Corporates & Communities -->
+    <section class="community-support" id="b2b-services">
+        <div class="container">
+            <div class="community-content">
+                <div class="community-header">
+                    <h2>Healthcare Support for Schools, Corporates & Communities</h2>
+                    <p>Through AHANA – AssistHealth's Affable Nursing Assistance, AssistHealth provides on‑site nursing and preventive care, supported by the same coordination model.</p>
+                </div>
+                
+                <div class="community-services">
+                    <div class="primary-services">
+                        <div class="service-group">
+                            <div class="service-item">
+                                <i class="fas fa-user-nurse"></i>
+                                <span>On‑site nurses & first aid</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>Daily health monitoring</span>
+                            </div>
+                        </div>
+                        
+                        <div class="service-group">
+                            <div class="service-item">
+                                <i class="fas fa-ambulance"></i>
+                                <span>Emergency response coordination</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Preventive health education</span>
+                            </div>
+                        </div>
+                        
+                        <div class="service-group">
+                            <div class="service-item">
+                                <i class="fas fa-procedures"></i>
+                                <span>Escalation to doctors & hospitals</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Service Card 3 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-house-medical"></i>
+                
+                <div class="community-used-in">
+                    <h3>Used In</h3>
+                    <div class="used-in-badges">
+                        <div class="used-in-badge">
+                            <i class="fas fa-school"></i>
+                            <span>Schools</span>
+                        </div>
+                        <div class="used-in-badge">
+                            <i class="fas fa-building"></i>
+                            <span>Corporate workplaces</span>
+                        </div>
+                        <div class="used-in-badge">
+                            <i class="fas fa-home"></i>
+                            <span>Residential communities</span>
+                        </div>
                     </div>
-                    <h3>Home-Based Care</h3>
-                    <p class="service-summary">Nursing, caregiving, post-hospital recovery support.</p>
-                    <button class="view-more-btn" onclick="toggleService(this)">
-                        View More <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Professional Nursing Services</li>
-                            <li><i class="fas fa-check"></i> Trained Caregivers</li>
-                            <li><i class="fas fa-check"></i> Post-Surgery Recovery</li>
-                            <li><i class="fas fa-check"></i> Rehabilitation Support</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-compass"></i>
-                    </div>
-                    <h3>Care Navigation</h3>
-                    <p class="service-summary">End-to-end coordination, reports, follow-ups, and medical guidance.</p>
-                    <button class="view-more-btn" onclick="toggleService(this)">
-                        View More <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Appointment Scheduling</li>
-                            <li><i class="fas fa-check"></i> Medical Records Management</li>
-                            <li><i class="fas fa-check"></i> Treatment Follow-ups</li>
-                            <li><i class="fas fa-check"></i> Family Communication & Updates</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service Card 5 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-vial"></i>
-                    </div>
-                    <h3>Diagnostics</h3>
-                    <p class="service-summary">Streamlined coordination of lab tests and imaging services.</p>
-                    <button class="view-more-btn" onclick="toggleService(this)">
-                        View More <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Pathological Diagnostics</li>
-                            <li><i class="fas fa-check"></i> Radiological Diagnostics</li>
-                            <li><i class="fas fa-check"></i> Home Sample Collection</li>
-                            <li><i class="fas fa-check"></i> Report Interpretation</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service Card 6 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-ambulance"></i>
-                    </div>
-                    <h3>Ambulance Services</h3>
-                    <p class="service-summary">Emergency transportation with trained medical personnel.</p>
-                    <button class="view-more-btn" onclick="toggleService(this)">
-                        View More <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li><i class="fas fa-check"></i> 24/7 Emergency Response</li>
-                            <li><i class="fas fa-check"></i> Basic & Advanced Life Support</li>
-                            <li><i class="fas fa-check"></i> Inter-Hospital Transfers</li>
-                            <li><i class="fas fa-check"></i> ICU Ambulances</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service Card 7 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-folder-medical"></i>
-                    </div>
-                    <h3>Health Records Management</h3>
-                    <p class="service-summary">Secure organization and digitization of medical records.</p>
-                    <button class="view-more-btn" onclick="toggleService(this)">
-                        View More <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Digital Health Timeline</li>
-                            <li><i class="fas fa-check"></i> Secure Cloud Storage</li>
-                            <li><i class="fas fa-check"></i> Easy Provider Sharing</li>
-                            <li><i class="fas fa-check"></i> Document Organization</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Service Card 8 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Helpline</h3>
-                    <p class="service-summary">Round-the-clock healthcare guidance and support.</p>
-                    <button class="view-more-btn" onclick="toggleService(this)">
-                        View More <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="service-details">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Immediate Medical Guidance</li>
-                            <li><i class="fas fa-check"></i> Symptom Triage</li>
-                            <li><i class="fas fa-check"></i> Appointment Assistance</li>
-                            <li><i class="fas fa-check"></i> Emergency Coordination</li>
-                        </ul>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -319,51 +244,6 @@
         </div>
     </section>
 
-    <!-- Why Choose AssistHealth Section -->
-    <section class="why-choose" id="why-choose">
-        <div class="container">
-            <h2 class="section-title">Why Families Choose AssistHealth</h2>
-            <div class="differentiators-grid">
-                
-                <!-- Differentiator Card 1 -->
-                <div class="differentiator-card">
-                    <div class="card-icon">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3>One Dedicated Point of Contact</h3>
-                    <p>Your personal healthcare navigator who knows your complete medical history and coordinates all your care needs.</p>
-                </div>
-
-                <!-- Differentiator Card 2 -->
-                <div class="differentiator-card">
-                    <div class="card-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>No Hospital Bias</h3>
-                    <p>Independent recommendations based solely on your needs, not commissions or partnerships.</p>
-                </div>
-
-                <!-- Differentiator Card 3 -->
-                <div class="differentiator-card">
-                    <div class="card-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Real Humans, Real Accountability</h3>
-                    <p>Not a call center or chatbot. Real healthcare professionals you can trust and rely on.</p>
-                </div>
-
-                <!-- Differentiator Card 4 -->
-                <div class="differentiator-card">
-                    <div class="card-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Continuity of Care</h3>
-                    <p>Seamless coordination across all providers—from diagnosis to recovery and beyond.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- Stats Counter Section -->
     <section class="stats-section" id="stats">
@@ -599,7 +479,7 @@
     <section class="membership-plans" id="plans">
         <div class="container">
             <h2 class="section-title">Membership Plans</h2>
-            <p class="section-subtitle">Choose the plan that fits your healthcare needs</p>
+            <p class="section-subtitle">Explore healthcare plans designed for your needs</p>
             
             <div class="plans-grid">
                 
@@ -612,13 +492,9 @@
                     <ul class="plan-features">
                         <li><i class="fas fa-check"></i> Dedicated healthcare navigator</li>
                         <li><i class="fas fa-check"></i> Medical record management</li>
-                        <li><i class="fas fa-check"></i> One online consultation (free)</li>
-                        <li><i class="fas fa-check"></i> Continuous care coordination</li>
                         <li><i class="fas fa-check"></i> Priority appointment scheduling</li>
-                        <li><i class="fas fa-check"></i> 24/7 helpline access</li>
-                        <li><i class="fas fa-check"></i> Family coverage (up to 4 members)</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#contact" class="btn btn-primary">View More</a>
                 </div>
 
                 <!-- Special Care Plans -->
@@ -628,113 +504,18 @@
                     <div class="plan-price">₹15,000<span>/year</span></div>
                     <p class="plan-subtext">+ ₹1,000 registration (one-time)</p>
                     <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> All Premium Plan benefits</li>
                         <li><i class="fas fa-check"></i> Dedicated care team</li>
                         <li><i class="fas fa-check"></i> Priority access to specialists</li>
                         <li><i class="fas fa-check"></i> Home visits & nursing support</li>
                         <li><i class="fas fa-check"></i> Chronic, cancer & post-surgery care</li>
-                        <li><i class="fas fa-check"></i> 4 free online consultations</li>
-                        <li><i class="fas fa-check"></i> 4 free nurse visits</li>
-                        <li><i class="fas fa-check"></i> Custom care plans available</li>
                     </ul>
-                    <a href="#contact" class="btn btn-secondary">Talk to Expert</a>
+                    <a href="#contact" class="btn btn-secondary">Explore Membership Options</a>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Specialized Care Programs Section -->
-    <section class="specialized-care" id="specialized-care">
-        <div class="container">
-            <h2 class="section-title">Specialized Care Programs</h2>
-            <p class="section-subtitle">Tailored support for specific healthcare needs</p>
-            
-            <div class="care-packages">
-                
-                <!-- Package 1: Senior Care -->
-                <div class="care-package">
-                    <div class="package-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <h3>Senior Care Package</h3>
-                    <p>Geriatric-specialized support for elderly healthcare needs</p>
-                    <a href="#" class="package-link">Learn More →</a>
-                </div>
-
-                <!-- Package 2: Cancer Care -->
-                <div class="care-package">
-                    <div class="package-icon">
-                        <i class="fas fa-ribbon"></i>
-                    </div>
-                    <h3>Cancer Care Package</h3>
-                    <p>Comprehensive support throughout diagnosis, treatment, and recovery</p>
-                    <a href="#" class="package-link">Learn More →</a>
-                </div>
-
-                <!-- Package 3: Maternity Care -->
-                <div class="care-package">
-                    <div class="package-icon">
-                        <i class="fas fa-baby"></i>
-                    </div>
-                    <h3>Maternity Package</h3>
-                    <p>Complete support throughout pregnancy, delivery, and postpartum</p>
-                    <a href="#" class="package-link">Learn More →</a>
-                </div>
-
-                <!-- Package 4: Chronic Care -->
-                <div class="care-package">
-                    <div class="package-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Chronic Care Package</h3>
-                    <p>Long-term management for diabetes, cardiac, and chronic conditions</p>
-                    <a href="#" class="package-link">Learn More →</a>
-                </div>
-
-                <!-- Package 5: Surgery Care -->
-                <div class="care-package">
-                    <div class="package-icon">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3>Surgery Care Package</h3>
-                    <p>Pre and post-surgery coordination with complete recovery support</p>
-                    <a href="#" class="package-link">Learn More →</a>
-                </div>
-
-                <!-- Package 6: Hospital Care -->
-                <div class="care-package">
-                    <div class="package-icon">
-                        <i class="fas fa-procedures"></i>
-                    </div>
-                    <h3>Hospital & Post-Hospital Care</h3>
-                    <p>In-hospital companion and comprehensive discharge planning</p>
-                    <a href="#" class="package-link">Learn More →</a>
-                </div>
-
-                <!-- Package 7: Palliative Care (swapped) -->
-                <div class="care-package">
-                    <div class="package-icon">
-                        <i class="fas fa-heart-pulse"></i>
-                    </div>
-                    <h3>Palliative Care Package</h3>
-                    <p>Compassionate end-of-life care and family support services</p>
-                    <a href="#" class="package-link">Learn More →</a>
-                </div>
-
-                <!-- Package 8: Custom Care Package -->
-                <div class="care-package">
-                    <div class="package-icon">
-                        <i class="fas fa-user-cog"></i>
-                    </div>
-                    <h3>Custom Care Package</h3>
-                    <p>Tailored healthcare solutions designed specifically for your unique medical needs and preferences</p>
-                    <a href="#" class="package-link">Learn More →</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
@@ -751,11 +532,11 @@
                         </div>
                         <div class="benefit">
                             <i class="fas fa-check-circle"></i>
-                            <span>No long-term commitment, cancel anytime</span>
+                            <span>No Long-Term Commitment - Cancel Anytime</span>
                         </div>
                         <div class="benefit">
                             <i class="fas fa-check-circle"></i>
-                            <span>Start with a free consultation call</span>
+                            <span>Free Consultation & Health Assessment</span>
                         </div>
                     </div>
                 </div>
@@ -773,9 +554,15 @@
             </div>
             
             <div class="trust-elements">
-                <i class="fas fa-shield-alt"></i> Secure & Confidential
-                <i class="fas fa-clock"></i> 24/7 Availability
-                <i class="fas fa-users"></i> 10,000+ Families Supported
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i> Secure & Confidential
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-clock"></i> 24/7 Availability
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-users"></i> 10,000+ Families Supported
+                </div>
             </div>
         </div>
     </section>
