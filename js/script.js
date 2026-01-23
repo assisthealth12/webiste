@@ -1204,3 +1204,70 @@ if (document.querySelector('.minimal-login-page')) {
     });
 })();
 
+// B2B Detailed Services Functionality
+(function() {
+    const b2bContainer = document.querySelector('.b2b-services-container');
+    if (!b2bContainer) return;
+
+    // Category Switching
+    const categoryBtns = document.querySelectorAll('.b2b-category-btn');
+    const categories = document.querySelectorAll('.b2b-category');
+
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const categoryId = this.getAttribute('data-category');
+
+            // Update buttons
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            // Update categories
+            categories.forEach(cat => {
+                cat.classList.remove('active');
+                if (cat.id === categoryId) {
+                    cat.classList.add('active');
+                }
+            });
+
+            // Close all items in the newly activated category
+            const activeCategory = document.getElementById(categoryId);
+            if (activeCategory) {
+                activeCategory.querySelectorAll('.b2b-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        });
+    });
+
+    // Accordion Toggling
+    const b2bHeaders = document.querySelectorAll('.b2b-header');
+    b2bHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const currentItem = this.closest('.b2b-item');
+            const isActive = currentItem.classList.contains('active');
+
+            // Close other items in the same category
+            const parentCategory = this.closest('.b2b-category');
+            parentCategory.querySelectorAll('.b2b-item').forEach(item => {
+                if (item !== currentItem) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            if (isActive) {
+                currentItem.classList.remove('active');
+            } else {
+                currentItem.classList.add('active');
+            }
+        });
+    });
+
+    // Initialize first category as active if not already
+    const activeBtn = document.querySelector('.b2b-category-btn.active');
+    if (activeBtn) {
+        const categoryId = activeBtn.getAttribute('data-category');
+        document.getElementById(categoryId)?.classList.add('active');
+    }
+})();
+
