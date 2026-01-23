@@ -4315,13 +4315,24 @@ body {
 /* B2B Detailed Services Section */
 .b2b-services-detailed {
     background: var(--white);
-    padding: 100px 0;
+    padding: 60px 0;
+}
+
+.b2b-services-detailed .section-title {
+    margin-bottom: 20px;
+}
+
+.b2b-services-detailed .section-subtitle {
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .b2b-services-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 40px;
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
