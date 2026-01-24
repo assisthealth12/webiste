@@ -2453,30 +2453,28 @@ body {
     .stats-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 8px;
-        /* Tighter gap for mobile */
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .stat-card {
-        padding: 15px 5px;
-        border-radius: 12px;
-        min-height: 120px;
-        /* Ensure enough height for content */
+        padding: 10px 5px;
+        border-radius: 10px;
+        min-height: 90px;
     }
 
     .stat-icon {
-        font-size: 20px;
-        margin-bottom: 8px;
+        font-size: 18px;
+        margin-bottom: 6px;
     }
 
     .stat-number {
-        font-size: 18px;
-        margin-bottom: 4px;
+        font-size: 16px;
+        margin-bottom: 2px;
     }
 
     .stat-label {
-        font-size: 10px;
-        line-height: 1.2;
+        font-size: 9px;
+        line-height: 1.1;
     }
 }
 
