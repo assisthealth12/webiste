@@ -2334,8 +2334,21 @@ body {
 
 /* Stats Counter Section */
 .stats-section {
-    background: var(--light-grey);
-    padding: 60px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(69, 167, 112, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
 }
 
 .stats-grid {
@@ -2346,17 +2359,25 @@ body {
 }
 
 .stat-card {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 32px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    background: var(--white);
+    box-shadow: 0 20px 40px rgba(69, 167, 112, 0.1);
+    border-color: rgba(69, 167, 112, 0.2);
 }
 
 .stat-icon {
@@ -2430,7 +2451,32 @@ body {
 
 @media (max-width: 768px) {
     .stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        /* Tighter gap for mobile */
+        margin-top: 30px;
+    }
+
+    .stat-card {
+        padding: 15px 5px;
+        border-radius: 12px;
+        min-height: 120px;
+        /* Ensure enough height for content */
+    }
+
+    .stat-icon {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .stat-number {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+        line-height: 1.2;
     }
 }
 
