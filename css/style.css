@@ -245,18 +245,32 @@ body {
 }
 
 .btn-large {
-    padding: 16px 32px;
-    font-size: 16px;
+    padding: 16px 40px;
+    font-size: 18px;
+    border-radius: 12px;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(90deg,
-            #eef7f4 0%,
-            #f3fbf8 55%,
-            #ffffff 100%) !important;
-    padding: 90px 0;
+    background: radial-gradient(circle at 70% 30%, #e8f5ee 0%, #ffffff 75%) !important;
+    padding: 70px 0;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: white;
+    border-radius: 50% / 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
 }
 
 .hero .container {
@@ -270,42 +284,37 @@ body {
     gap: 40px;
 }
 
-.hero-text {
-    flex: 1;
+.hero-pre-title {
+    font-size: 24px;
+    color: #4b5563;
+    margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .hero h1 {
-    font-size: 34px;
+    font-size: 38px;
     font-weight: 700;
-    color: var(--dark-charcoal);
-    line-height: 1.4;
-    margin-bottom: 24px;
+    color: #1e3a3a;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    white-space: nowrap;
 }
 
 .hero-subheading {
-    font-size: 20px;
-    color: var(--warm-grey);
-    line-height: 1.6;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
-.hero-subheading p {
-    margin-bottom: 16px;
+.hero-feature {
+    font-size: 28px;
+    color: #374151;
+    font-weight: 400;
+    margin-bottom: 8px;
 }
 
-.hero-subheading p:first-child {
-    font-size: 22px;
-    color: var(--teal-green);
-    font-weight: 600;
-}
-
-.hero-subheading p:last-child {
-    margin-bottom: 0;
-}
-
-.hero-subheading strong {
-    color: var(--dark-charcoal);
-    font-weight: 600;
+.hero-desc {
+    font-size: 26px;
+    color: #6b7280;
+    font-weight: 400;
 }
 
 
@@ -339,15 +348,16 @@ body {
 
 .hero-image {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-image img {
-    width: 520px;
+    width: 580px;
     max-width: 100%;
     height: auto;
-
     filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.10));
 }
 
